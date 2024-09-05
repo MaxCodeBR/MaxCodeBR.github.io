@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -99,12 +100,25 @@
       border-radius: 10px;
     }
 
-    /* Seção de aplicativos */
-    .apps-section {
-      background-color: #1e1e1e;
+    /* Seções */
+    .section {
       padding: 40px 20px;
+      background-color: #1e1e1e;
+      margin-top: 20px;
     }
 
+    .section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .section p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #b0b0b0;
+    }
+
+    /* Seção de aplicativos */
     .apps-container {
       max-width: 1200px;
       margin: 0 auto;
@@ -223,8 +237,15 @@
     <p>Aplicativos móveis inovadores para a sua vida digital</p>
   </header>
 
-  <!-- Seção de aplicativos -->
+  <!-- Seção Sobre -->
+  <section class="section" id="sobre">
+    <h2>Sobre Nós</h2>
+    <p>Na MaxCodeBR, desenvolvemos aplicativos móveis inovadores que atendem às suas necessidades diárias. Nossa equipe é composta por especialistas apaixonados por tecnologia e design, comprometidos em oferecer soluções práticas e eficazes para você.</p>
+  </section>
+
+  <!-- Seção Apps -->
   <section class="apps-section" id="apps">
+    <h2>Nossos Aplicativos</h2>
     <div class="apps-container">
       <div class="app-card">
         <img src="app1-image.png" alt="App 1">
@@ -246,19 +267,24 @@
         <img src="app3-image.png" alt="App 3">
         <div class="app-card-content">
           <h3>App 3 - Finanças Pessoais</h3>
-          <p>Gerencie suas finanças e atinja seus objetivos financeiros com o App 3.</p>
+          <p>Controle suas finanças de maneira fácil e prática com o App 3.</p>
           <a href="https://play.google.com/store/apps/details?id=com.example.app3" target="_blank">Baixar App</a>
         </div>
       </div>
-      <div class="app-card">
-        <img src="app4-image.png" alt="App 4">
-        <div class="app-card-content">
-          <h3>App 4 - Agenda Digital</h3>
-          <p>Organize seus compromissos com o App 4, uma agenda digital completa.</p>
-          <a href="https://apps.apple.com/us/app/example-app4/id1234567890" target="_blank">Baixar App</a>
-        </div>
-      </div>
     </div>
+  </section>
+
+  <!-- Seção Contato -->
+  <section class="section" id="contato">
+    <h2>Contato</h2>
+    <p>Para entrar em contato conosco, envie um e-mail para contato@maxcodebr.com.br ou preencha o formulário de contato em nosso site.</p>
+  </section>
+
+  <!-- Seção Baixar app-ads.txt -->
+  <section class="section" id="baixar">
+    <h2>Baixar app-ads.txt</h2>
+    <p>Você pode baixar o arquivo app-ads.txt aqui para garantir a conformidade com as políticas de anúncios.</p>
+    <a href="app-ads.txt" download class="download-button">Baixar agora</a>
   </section>
 
   <!-- Rodapé -->
