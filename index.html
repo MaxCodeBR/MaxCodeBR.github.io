@@ -74,9 +74,10 @@
     }
 
     .hero-image img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 10px;
+      width: 100%; /* Ajusta a largura para a tela */
+       height: auto; /* Mantém a proporção */
+       max-height: 60vh; /* Ajusta a altura para no máximo 60% da altura da tela */
+       object-fit: cover; /* Cobre o elemento sem distorcer a imagem */
     }
 
     /* Cabeçalho principal */
