@@ -19,7 +19,7 @@
     /* Cabeçalho com menu de navegação */
     .navbar {
       background-color: #1a1a1a;
-      padding: 10px 20px;
+      padding: 15px 30px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -31,9 +31,11 @@
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     }
 
+    /* Logo e Menu mais compactos */
     .navbar img {
-      max-width: 100px;
+      max-width: 80px;
       height: auto;
+      margin-right: 30px;
     }
 
     .navbar ul {
@@ -62,13 +64,21 @@
 
     /* Estilo para espaçamento após o menu */
     .content {
-      padding-top: 80px; /* Compensa o menu fixo */
+      padding-top: 100px; /* Compensa o menu fixo */
+    }
+
+    /* Estilo de imagem de destaque */
+    .featured-image {
+      width: 100%;
+      height: auto;
+      max-height: 500px;
+      object-fit: cover;
     }
 
     /* Estilo de cabeçalho principal */
     .header {
       background-color: #1a1a1a;
-      padding: 80px 20px; /* Espaçamento maior para se ajustar ao menu fixo */
+      padding: 60px 20px;
       text-align: center;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
       position: relative;
@@ -218,8 +228,14 @@
       <li><a href="#sobre">Sobre</a></li>
       <li><a href="#apps">Apps</a></li>
       <li><a href="#contato">Contato</a></li>
+      <li><a href="#baixar">Baixar app-ads.txt</a></li>
     </ul>
   </nav>
+
+  <!-- Imagem de destaque -->
+  <div class="content">
+    <img src="sua-imagem-destaque.jpg" alt="Imagem de Destaque" class="featured-image">
+  </div>
 
   <!-- Conteúdo principal -->
   <div class="content">
@@ -247,24 +263,30 @@
       </div>
     </section>
 
+    <!-- Seção para Baixar app-ads.txt -->
+    <section id="baixar" class="container">
+      <h2>Baixar app-ads.txt</h2>
+      <a href="app-ads.txt" class="button" download>Baixar app-ads.txt</a>
+    </section>
+
     <!-- Cards com Efeito 3D -->
     <section id="apps" class="container">
       <div class="card">
         <h3>Aplicativo 1 - Inovação e Praticidade</h3>
-        <p>O App 1 oferece uma experiência completa e intuitiva para gestão de tarefas. Acesse e experimente agora mesmo.</p>
+        <p>O App 1 oferece uma experiência completa para gerenciar suas tarefas diárias com eficiência e estilo.</p>
       </div>
       <div class="card">
-        <h3>Aplicativo 2 - Controle Financeiro</h3>
-        <p>Com o App 2, você pode controlar seus gastos e planejar seu orçamento com facilidade. Baixe agora!</p>
+        <h3>Aplicativo 2 - Sua Assistente Pessoal</h3>
+        <p>Transforme a maneira como você organiza sua vida com o App 2, sua assistente pessoal sempre à disposição.</p>
       </div>
     </section>
 
-    <!-- Rodapé -->
-    <footer id="contato" class="footer">
-      <p>MaxCodeBR - Todos os direitos reservados. Contato: maxcodebr@example.com</p>
-    </footer>
-
   </div>
+
+  <!-- Rodapé -->
+  <footer class="footer">
+    <p>MaxCodeBR - Todos os direitos reservados. Contato: maxcodebr@example.com</p>
+  </footer>
   
 </body>
 </html>
