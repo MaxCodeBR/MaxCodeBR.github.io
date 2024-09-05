@@ -16,20 +16,62 @@
       scroll-behavior: smooth;
     }
 
-    /* Cabeçalho */
+    /* Cabeçalho com menu de navegação */
+    .navbar {
+      background-color: #1a1a1a;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    .navbar img {
+      max-width: 100px;
+      height: auto;
+    }
+
+    .navbar ul {
+      list-style-type: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar ul li {
+      display: inline;
+    }
+
+    .navbar ul li a {
+      text-decoration: none;
+      color: #ffffff;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      transition: color 0.3s;
+    }
+
+    .navbar ul li a:hover {
+      color: #BD0689;
+    }
+
+    /* Estilo para espaçamento após o menu */
+    .content {
+      padding-top: 80px; /* Compensa o menu fixo */
+    }
+
+    /* Estilo de cabeçalho principal */
     .header {
       background-color: #1a1a1a;
-      padding: 20px;
+      padding: 80px 20px; /* Espaçamento maior para se ajustar ao menu fixo */
       text-align: center;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
       position: relative;
-    }
-
-    /* Estilo para o logo */
-    .header .logo {
-      max-width: 150px;
-      height: auto;
-      margin-bottom: 20px;
     }
 
     .header h1 {
@@ -141,6 +183,11 @@
 
     /* Responsividade */
     @media (max-width: 768px) {
+      .navbar ul {
+        flex-direction: column;
+        align-items: center;
+      }
+
       .header h1 {
         font-size: 2rem;
       }
@@ -163,45 +210,68 @@
 </head>
 <body>
 
-  <!-- Cabeçalho -->
-  <header class="header">
-    <img src="logo.png" alt="Logo da MaxCodeBR" class="logo"> <!-- Logo adicionado aqui -->
-    <h1>MaxCodeBR</h1>
-  </header>
+  <!-- Menu de navegação -->
+  <nav class="navbar">
+    <a href="#home"><img src="logo.png" alt="Logo MaxCodeBR"></a> <!-- Logo aqui -->
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#apps">Apps</a></li>
+      <li><a href="#contato">Contato</a></li>
+      <li><a href="#baixar">Baixar app-ads.txt</a></li>
+    </ul>
+  </nav>
 
   <!-- Conteúdo principal -->
-  <div class="container">
-    <h2>Bem-vindo à MaxCodeBR</h2>
-    <p>Desenvolvemos soluções tecnológicas inovadoras para dispositivos móveis, trazendo o futuro para a palma da sua mão.</p>
-    <p>Clique abaixo para baixar o arquivo app-ads.txt:</p>
-    <a href="app-ads.txt" class="button" download>Baixar app-ads.txt</a>
+  <div class="content">
 
-    <!-- Seção de Aplicativos -->
-    <h2>Nossos Aplicativos</h2>
-    <div class="app-buttons">
-      <a href="https://play.google.com/store/apps/details?id=com.example.app1" target="_blank">App 1</a>
-      <a href="https://play.google.com/store/apps/details?id=com.example.app2" target="_blank">App 2</a>
-      <a href="https://play.google.com/store/apps/details?id=com.example.app3" target="_blank">App 3</a>
-      <a href="https://apps.apple.com/us/app/example-app1/id1234567890" target="_blank">App 4</a>
-      <a href="https://apps.apple.com/us/app/example-app2/id0987654321" target="_blank">App 5</a>
-    </div>
+    <!-- Seção de Boas-Vindas -->
+    <section id="home" class="header">
+      <h1>MaxCodeBR</h1>
+    </section>
+
+    <!-- Seção Sobre -->
+    <section id="sobre" class="container">
+      <h2>Sobre Nós</h2>
+      <p>Na MaxCodeBR, desenvolvemos soluções tecnológicas inovadoras para dispositivos móveis, trazendo o futuro para a palma da sua mão.</p>
+    </section>
+
+    <!-- Seção de Apps -->
+    <section id="apps" class="container">
+      <h2>Nossos Aplicativos</h2>
+      <div class="app-buttons">
+        <a href="https://play.google.com/store/apps/details?id=com.example.app1" target="_blank">App 1</a>
+        <a href="https://play.google.com/store/apps/details?id=com.example.app2" target="_blank">App 2</a>
+        <a href="https://play.google.com/store/apps/details?id=com.example.app3" target="_blank">App 3</a>
+        <a href="https://apps.apple.com/us/app/example-app1/id1234567890" target="_blank">App 4</a>
+        <a href="https://apps.apple.com/us/app/example-app2/id0987654321" target="_blank">App 5</a>
+      </div>
+    </section>
+
+    <!-- Seção para Baixar app-ads.txt -->
+    <section id="baixar" class="container">
+      <h2>Baixar app-ads.txt</h2>
+      <a href="app-ads.txt" class="button" download>Baixar app-ads.txt</a>
+    </section>
 
     <!-- Cards com Efeito 3D -->
-    <div class="card">
-      <h3>Aplicativo 1 - Inovação e Praticidade</h3>
-      <p>O App 1 oferece uma experiência completa e intuitiva para gestão de tarefas. Acesse e experimente agora mesmo.</p>
-    </div>
-    <div class="card">
-      <h3>Aplicativo 2 - Controle Financeiro</h3>
-      <p>Com o App 2, você pode controlar seus gastos e planejar seu orçamento com facilidade. Baixe agora!</p>
-    </div>
+    <section id="apps" class="container">
+      <div class="card">
+        <h3>Aplicativo 1 - Inovação e Praticidade</h3>
+        <p>O App 1 oferece uma experiência completa e intuitiva para gestão de tarefas. Acesse e experimente agora mesmo.</p>
+      </div>
+      <div class="card">
+        <h3>Aplicativo 2 - Controle Financeiro</h3>
+        <p>Com o App 2, você pode controlar seus gastos e planejar seu orçamento com facilidade. Baixe agora!</p>
+      </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer id="contato" class="footer">
+      <p>MaxCodeBR - Todos os direitos reservados. Contato: maxcodebr@example.com</p>
+    </footer>
+
   </div>
-
-  <!-- Rodapé -->
-  <footer class="footer">
-    <p>&copy; 2024 MaxCodeBR. Todos os direitos reservados.</p>
-  </footer>
-
+  
 </body>
 </html>
-
