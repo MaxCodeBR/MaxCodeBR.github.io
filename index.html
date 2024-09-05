@@ -10,15 +10,15 @@
     body {
       margin: 0;
       padding: 0;
-      background-color: #f5f5f5; /* Cor de fundo clara, similar à Play Store */
-      color: #333;
+      background-color: #121212; /* Fundo escuro */
+      color: #e0e0e0; /* Texto claro para contraste */
       font-family: 'Roboto', sans-serif;
       scroll-behavior: smooth;
     }
 
-    /* Cabeçalho fixo com fundo branco e sombra */
+    /* Cabeçalho fixo com fundo escuro e sombra */
     .navbar {
-      background-color: #fff;
+      background-color: #1f1f1f; /* Fundo escuro do menu */
       padding: 15px 30px;
       display: flex;
       align-items: center;
@@ -28,11 +28,11 @@
       top: 0;
       left: 0;
       z-index: 1000;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     }
 
     .navbar img {
-      max-width: 100px;
+      max-width: 120px;
       height: auto;
     }
 
@@ -46,14 +46,14 @@
 
     .navbar ul li a {
       text-decoration: none;
-      color: #333;
+      color: #e0e0e0;
       font-size: 1rem;
       font-weight: bold;
       transition: color 0.3s;
     }
 
     .navbar ul li a:hover {
-      color: #01875f;
+      color: #03dac5; /* Verde claro no hover */
     }
 
     /* Espaço após o menu fixo */
@@ -63,10 +63,10 @@
 
     /* Cabeçalho principal */
     .header {
-      background-color: #01875f;
+      background-color: #1f1f1f;
       padding: 50px 20px;
       text-align: center;
-      color: #fff;
+      color: #e0e0e0;
     }
 
     .header h1 {
@@ -78,12 +78,24 @@
     .header p {
       font-size: 1.2rem;
       margin-top: 15px;
-      color: #e0f7e9;
+      color: #bb86fc; /* Cor de destaque */
+    }
+
+    /* Seção de imagem após o menu */
+    .hero-image {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .hero-image img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
     }
 
     /* Seção de aplicativos */
     .apps-section {
-      background-color: #fff;
+      background-color: #1e1e1e;
       padding: 40px 20px;
     }
 
@@ -97,16 +109,16 @@
 
     /* Estilo de cards de aplicativos */
     .app-card {
-      background-color: #fff;
+      background-color: #292929;
       border-radius: 10px;
       overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .app-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
     }
 
     .app-card img {
@@ -123,13 +135,13 @@
     .app-card-content h3 {
       margin: 0;
       font-size: 1.4rem;
-      color: #333;
+      color: #e0e0e0;
     }
 
     .app-card-content p {
       margin-top: 10px;
       font-size: 1rem;
-      color: #666;
+      color: #b0b0b0;
     }
 
     .app-card-content a {
@@ -137,20 +149,20 @@
       margin-top: 15px;
       padding: 10px 20px;
       font-size: 1rem;
-      background-color: #01875f;
-      color: #fff;
+      background-color: #03dac5;
+      color: #121212;
       border-radius: 5px;
       text-decoration: none;
       transition: background-color 0.3s ease;
     }
 
     .app-card-content a:hover {
-      background-color: #016d4c;
+      background-color: #03a89e;
     }
 
     /* Rodapé */
     .footer {
-      background-color: #f1f1f1;
+      background-color: #1f1f1f;
       padding: 20px;
       text-align: center;
       color: #666;
@@ -187,6 +199,11 @@
       <li><a href="#baixar">Baixar app-ads.txt</a></li>
     </ul>
   </nav>
+
+  <!-- Espaço para a imagem após o menu -->
+  <div class="hero-image">
+    <img src="hero-image.png" alt="Imagem Heroica">
+  </div>
 
   <!-- Cabeçalho principal -->
   <header class="header" id="home">
