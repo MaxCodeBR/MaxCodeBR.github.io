@@ -19,16 +19,22 @@
     /* Cabeçalho fixo com fundo escuro e sombra */
     .navbar {
       background-color: #1f1f1f; /* Fundo escuro do menu */
-      padding: 15px 30px;
+      padding: 15px 0;
       display: flex;
-      align-items: center;
-      justify-content: space-between;
+      justify-content: center; /* Centralizar o conteúdo */
       position: fixed;
-      width: 90%;
+      width: 100%;
       top: 0;
       left: 0;
       z-index: 1000;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .navbar-content {
+      width: 70%; /* Define a largura do menu como 70% da tela */
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
 
     .navbar img {
@@ -171,6 +177,10 @@
 
     /* Responsividade */
     @media (max-width: 768px) {
+      .navbar-content {
+        width: 90%; /* Ajusta a largura em telas menores */
+      }
+
       .navbar ul {
         flex-direction: column;
         align-items: center;
@@ -190,13 +200,16 @@
 
   <!-- Menu de navegação -->
   <nav class="navbar">
-    <a href="#home"><img src="logo.png" alt="Logo MaxCodeBR"></a> <!-- Logo -->
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#sobre">Sobre</a></li>
-      <li><a href="#apps">Apps</a></li>
-      <li><a href="#contato">Contato</a></li>
-    </ul>
+    <div class="navbar-content">
+      <a href="#home"><img src="logo.png" alt="Logo MaxCodeBR"></a> <!-- Logo -->
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#apps">Apps</a></li>
+        <li><a href="#contato">Contato</a></li>
+        <li><a href="#baixar">Baixar app-ads.txt</a></li>
+      </ul>
+    </div>
   </nav>
 
   <!-- Espaço para a imagem após o menu -->
@@ -250,7 +263,7 @@
 
   <!-- Rodapé -->
   <footer class="footer">
-    <p>MaxCodeBR - Todos os direitos reservados. Contato: maxcodebr@example.com</p>
+    <p>&copy; 2024 MaxCodeBR. Todos os direitos reservados.</p>
   </footer>
 
 </body>
