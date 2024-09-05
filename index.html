@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>MaxCodeBR - Página do Desenvolvedor</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    .header {
+      background: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .container h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .container p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 1rem;
+      color: #fff;
+      background: #007BFF;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      margin-top: 20px;
+    }
+
+    .button:hover {
+      background: #0056b3;
+    }
+
+    .app-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .app-buttons a {
+      display: block;
+      width: 200px;
+      padding: 15px;
+      font-size: 1rem;
+      color: #fff;
+      background: #28a745;
+      border-radius: 5px;
+      text-align: center;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .app-buttons a:hover {
+      background: #218838;
+    }
+
+    .footer {
+      background: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .header h1 {
+        font-size: 2rem;
+      }
+
+      .container h2 {
+        font-size: 1.5rem;
+      }
+
+      .app-buttons a {
+        width: 100%;
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <h1>MaxCodeBR</h1>
+  </header>
+
+  <div class="container">
+    <h2>Bem-vindo à MaxCodeBR</h2>
+    <p>Olá! Sou o desenvolvedor por trás dos aplicativos MaxCodeBR. Aqui você pode encontrar informações sobre meus projetos, aplicativos e muito mais.</p>
+    <p>Para visualizar o arquivo app-ads.txt, clique no botão abaixo:</p>
+    <a href="app-ads.txt" class="button" download>Baixar app-ads.txt</a>
+
+    <h2>Nossos Aplicativos</h2>
+    <p>Confira nossos aplicativos e faça o download:</p>
+    <div class="app-buttons">
+      <a href="https://play.google.com/store/apps/details?id=com.example.app1" target="_blank">Aplicativo 1</a>
+      <a href="https://play.google.com/store/apps/details?id=com.example.app2" target="_blank">Aplicativo 2</a>
+      <a href="https://play.google.com/store/apps/details?id=com.example.app3" target="_blank">Aplicativo 3</a>
+      <a href="https://apps.apple.com/us/app/example-app1/id1234567890" target="_blank">Aplicativo 4</a>
+      <a href="https://apps.apple.com/us/app/example-app2/id0987654321" target="_blank">Aplicativo 5</a>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>&copy; 2024 MaxCodeBR. Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+</html>
