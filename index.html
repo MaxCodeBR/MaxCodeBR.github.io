@@ -4,116 +4,137 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>MaxCodeBR - Desenvolvedor de Tecnologia</title>
+  <title>MaxCodeBR - Desenvolvedor de Apps</title>
   <style>
-    /* Estilos Globais */
+    /* Definições globais */
     body {
-      font-family: 'Roboto', sans-serif;
-      background-color: #121212;
-      color: #e0e0e0;
       margin: 0;
       padding: 0;
+      background-color: #121212; /* Preto fosco */
+      color: #ffffff;
+      font-family: 'Roboto', sans-serif;
+      scroll-behavior: smooth;
     }
 
+    /* Cabeçalho */
     .header {
-      background-color: #1c1c1c;
+      background-color: #1a1a1a;
       padding: 20px;
       text-align: center;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     }
 
     .header h1 {
-      color: #FF00FF;
       font-size: 3rem;
-      margin: 0;
+      color: #BD0689;
+      text-transform: uppercase;
+      letter-spacing: 5px;
     }
 
-    .header h1 span {
-      color: #fff;
-    }
-
+    /* Contêiner */
     .container {
       max-width: 1200px;
-      margin: 40px auto;
-      padding: 20px;
-      background-color: #1c1c1c;
-      border-radius: 10px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+      margin: 0 auto;
+      padding: 40px 20px;
     }
 
     .container h2 {
       font-size: 2.5rem;
-      color: #FF00FF;
+      color: #BD0689;
       margin-bottom: 20px;
-      border-bottom: 2px solid #FF00FF;
-      padding-bottom: 10px;
+      border-left: 5px solid #BD0689;
+      padding-left: 15px;
     }
 
     .container p {
       font-size: 1.2rem;
       line-height: 1.8;
+      margin-bottom: 30px;
+      color: #e0e0e0;
     }
 
+    /* Estilização de botões */
     .button {
-      display: inline-block;
-      padding: 12px 24px;
+      padding: 15px 30px;
       font-size: 1.1rem;
       color: #fff;
-      background-color: #FF00FF;
+      background-color: #BD0689;
       border: none;
-      border-radius: 30px;
+      border-radius: 8px;
       text-decoration: none;
-      transition: background-color 0.3s ease, transform 0.3s ease;
-      margin-top: 20px;
+      display: inline-block;
+      transition: background 0.3s ease;
     }
 
     .button:hover {
-      background-color: #cc00cc;
-      transform: scale(1.05);
+      background-color: #9a056f;
     }
 
+    /* Botões dos aplicativos */
     .app-buttons {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-      margin-top: 40px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+      margin-bottom: 50px;
     }
 
     .app-buttons a {
-      display: block;
+      width: 220px;
       padding: 15px;
       font-size: 1.1rem;
-      color: #121212;
-      background-color: #FF00FF;
-      border-radius: 10px;
+      background-color: #BD0689;
+      color: #fff;
       text-align: center;
+      text-transform: uppercase;
+      border-radius: 8px;
       text-decoration: none;
-      transition: transform 0.3s ease;
+      transition: background 0.3s ease;
     }
 
     .app-buttons a:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 4px 15px rgba(255, 0, 255, 0.3);
+      background-color: #9a056f;
     }
 
+    /* Seção de cards com efeito 3D */
+    .card {
+      background-color: #1a1a1a;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(189, 6, 137, 0.3);
+    }
+
+    .card h3 {
+      color: #BD0689;
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+    }
+
+    .card p {
+      color: #b3b3b3;
+      line-height: 1.6;
+    }
+
+    /* Rodapé */
     .footer {
-      background-color: #1c1c1c;
-      color: #e0e0e0;
+      background-color: #1a1a1a;
       padding: 20px;
       text-align: center;
       font-size: 1rem;
-      margin-top: 40px;
-      border-top: 1px solid #333;
+      color: #e0e0e0;
     }
 
-    .neon {
-      color: #FF00FF;
-      text-shadow: 0 0 8px #FF00FF, 0 0 16px #FF00FF, 0 0 32px #FF00FF;
-    }
-
+    /* Responsividade */
     @media (max-width: 768px) {
       .header h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
       }
 
       .container h2 {
@@ -121,38 +142,58 @@
       }
 
       .app-buttons a {
-        padding: 10px;
-        font-size: 1rem;
+        width: 100%;
+        padding: 15px;
+      }
+
+      .card {
+        margin: 20px auto;
+        width: 100%;
       }
     }
   </style>
 </head>
 <body>
 
+  <!-- Cabeçalho -->
   <header class="header">
-    <h1><span class="neon">MaxCodeBR</span></h1>
+    <h1>MaxCodeBR</h1>
   </header>
 
+  <!-- Conteúdo principal -->
   <div class="container">
     <h2>Bem-vindo à MaxCodeBR</h2>
-    <p>Somos especialistas no desenvolvimento de soluções tecnológicas inovadoras. Confira nossos aplicativos e projetos mais recentes. Nossa missão é criar experiências digitais de qualidade que fazem a diferença.</p>
+    <p>Desenvolvemos soluções tecnológicas inovadoras para dispositivos móveis, trazendo o futuro para a palma da sua mão.</p>
+    <p>Clique abaixo para baixar o arquivo app-ads.txt:</p>
     <a href="app-ads.txt" class="button" download>Baixar app-ads.txt</a>
 
+    <!-- Seção de Aplicativos -->
     <h2>Nossos Aplicativos</h2>
-    <p>Explore nossos aplicativos mais recentes. Clique nos botões abaixo para baixar diretamente da loja:</p>
     <div class="app-buttons">
-      <a href="https://play.google.com/store/apps/details?id=com.example.app1" target="_blank">Aplicativo 1</a>
-      <a href="https://play.google.com/store/apps/details?id=com.example.app2" target="_blank">Aplicativo 2</a>
-      <a href="https://play.google.com/store/apps/details?id=com.example.app3" target="_blank">Aplicativo 3</a>
-      <a href="https://apps.apple.com/us/app/example-app1/id1234567890" target="_blank">Aplicativo 4</a>
-      <a href="https://apps.apple.com/us/app/example-app2/id0987654321" target="_blank">Aplicativo 5</a>
+      <a href="https://play.google.com/store/apps/details?id=com.example.app1" target="_blank">App 1</a>
+      <a href="https://play.google.com/store/apps/details?id=com.example.app2" target="_blank">App 2</a>
+      <a href="https://play.google.com/store/apps/details?id=com.example.app3" target="_blank">App 3</a>
+      <a href="https://apps.apple.com/us/app/example-app1/id1234567890" target="_blank">App 4</a>
+      <a href="https://apps.apple.com/us/app/example-app2/id0987654321" target="_blank">App 5</a>
+    </div>
+
+    <!-- Cards com Efeito 3D -->
+    <div class="card">
+      <h3>Aplicativo 1 - Inovação e Praticidade</h3>
+      <p>O App 1 oferece uma experiência completa e intuitiva para gestão de tarefas. Acesse e experimente agora mesmo.</p>
+    </div>
+    <div class="card">
+      <h3>Aplicativo 2 - Controle Financeiro</h3>
+      <p>Com o App 2, você pode controlar seus gastos e planejar seu orçamento com facilidade. Baixe agora!</p>
     </div>
   </div>
 
+  <!-- Rodapé -->
   <footer class="footer">
     <p>&copy; 2024 MaxCodeBR. Todos os direitos reservados.</p>
   </footer>
 
 </body>
 </html>
+
 
