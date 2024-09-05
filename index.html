@@ -10,15 +10,15 @@
     body {
       margin: 0;
       padding: 0;
-      background-color: #121212; /* Preto fosco */
-      color: #ffffff;
+      background-color: #f5f5f5; /* Cor de fundo clara, similar à Play Store */
+      color: #333;
       font-family: 'Roboto', sans-serif;
       scroll-behavior: smooth;
     }
 
-    /* Cabeçalho com menu de navegação */
+    /* Cabeçalho fixo com fundo branco e sombra */
     .navbar {
-      background-color: #1a1a1a;
+      background-color: #fff;
       padding: 15px 30px;
       display: flex;
       align-items: center;
@@ -28,14 +28,12 @@
       top: 0;
       left: 0;
       z-index: 1000;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
-    /* Logo e Menu mais compactos */
     .navbar img {
-      max-width: 80px;
+      max-width: 100px;
       height: auto;
-      margin-right: 30px;
     }
 
     .navbar ul {
@@ -46,149 +44,117 @@
       padding: 0;
     }
 
-    .navbar ul li {
-      display: inline;
-    }
-
     .navbar ul li a {
       text-decoration: none;
-      color: #ffffff;
-      font-size: 1.1rem;
-      text-transform: uppercase;
+      color: #333;
+      font-size: 1rem;
+      font-weight: bold;
       transition: color 0.3s;
     }
 
     .navbar ul li a:hover {
-      color: #BD0689;
+      color: #01875f;
     }
 
-    /* Estilo para espaçamento após o menu */
+    /* Espaço após o menu fixo */
     .content {
-      padding-top: 100px; /* Compensa o menu fixo */
+      padding-top: 80px; /* Ajuste conforme a altura do menu */
     }
 
-    /* Estilo de imagem de destaque */
-    .featured-image {
-      width: 100%;
-      height: auto;
-      max-height: 500px;
-      object-fit: cover;
-    }
-
-    /* Estilo de cabeçalho principal */
+    /* Cabeçalho principal */
     .header {
-      background-color: #1a1a1a;
-      padding: 60px 20px;
+      background-color: #01875f;
+      padding: 50px 20px;
       text-align: center;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-      position: relative;
+      color: #fff;
     }
 
     .header h1 {
-      font-size: 3rem;
-      color: #BD0689;
-      text-transform: uppercase;
-      letter-spacing: 5px;
+      font-size: 2.5rem;
+      margin: 0;
+      letter-spacing: 1px;
     }
 
-    /* Contêiner */
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
+    .header p {
+      font-size: 1.2rem;
+      margin-top: 15px;
+      color: #e0f7e9;
+    }
+
+    /* Seção de aplicativos */
+    .apps-section {
+      background-color: #fff;
       padding: 40px 20px;
     }
 
-    .container h2 {
-      font-size: 2.5rem;
-      color: #BD0689;
-      margin-bottom: 20px;
-      border-left: 5px solid #BD0689;
-      padding-left: 15px;
+    .apps-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
     }
 
-    .container p {
-      font-size: 1.2rem;
-      line-height: 1.8;
-      margin-bottom: 30px;
-      color: #e0e0e0;
-    }
-
-    /* Estilização de botões */
-    .button {
-      padding: 15px 30px;
-      font-size: 1.1rem;
-      color: #fff;
-      background-color: #BD0689;
-      border: none;
-      border-radius: 8px;
-      text-decoration: none;
-      display: inline-block;
-      transition: background 0.3s ease;
-    }
-
-    .button:hover {
-      background-color: #9a056f;
-    }
-
-    /* Botões dos aplicativos */
-    .app-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-      justify-content: center;
-      margin-bottom: 50px;
-    }
-
-    .app-buttons a {
-      width: 220px;
-      padding: 15px;
-      font-size: 1.1rem;
-      background-color: #BD0689;
-      color: #fff;
-      text-align: center;
-      text-transform: uppercase;
-      border-radius: 8px;
-      text-decoration: none;
-      transition: background 0.3s ease;
-    }
-
-    .app-buttons a:hover {
-      background-color: #9a056f;
-    }
-
-    /* Seção de cards com efeito 3D */
-    .card {
-      background-color: #1a1a1a;
+    /* Estilo de cards de aplicativos */
+    .app-card {
+      background-color: #fff;
       border-radius: 10px;
-      padding: 20px;
-      margin: 20px;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 15px 30px rgba(189, 6, 137, 0.3);
+    .app-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
     }
 
-    .card h3 {
-      color: #BD0689;
-      font-size: 1.5rem;
-      margin-bottom: 15px;
+    .app-card img {
+      width: 100%;
+      height: auto;
+      max-height: 150px;
+      object-fit: cover;
     }
 
-    .card p {
-      color: #b3b3b3;
-      line-height: 1.6;
+    .app-card-content {
+      padding: 20px;
+    }
+
+    .app-card-content h3 {
+      margin: 0;
+      font-size: 1.4rem;
+      color: #333;
+    }
+
+    .app-card-content p {
+      margin-top: 10px;
+      font-size: 1rem;
+      color: #666;
+    }
+
+    .app-card-content a {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      background-color: #01875f;
+      color: #fff;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .app-card-content a:hover {
+      background-color: #016d4c;
     }
 
     /* Rodapé */
     .footer {
-      background-color: #1a1a1a;
+      background-color: #f1f1f1;
       padding: 20px;
       text-align: center;
-      font-size: 1rem;
-      color: #e0e0e0;
+      color: #666;
+      font-size: 0.9rem;
     }
 
     /* Responsividade */
@@ -202,18 +168,8 @@
         font-size: 2rem;
       }
 
-      .container h2 {
-        font-size: 2rem;
-      }
-
-      .app-buttons a {
-        width: 100%;
-        padding: 15px;
-      }
-
-      .card {
-        margin: 20px auto;
-        width: 100%;
+      .app-card img {
+        max-height: 100px;
       }
     }
   </style>
@@ -222,7 +178,7 @@
 
   <!-- Menu de navegação -->
   <nav class="navbar">
-    <a href="#home"><img src="logo.png" alt="Logo MaxCodeBR"></a> <!-- Logo aqui -->
+    <a href="#home"><img src="logo.png" alt="Logo MaxCodeBR"></a> <!-- Logo -->
     <ul>
       <li><a href="#home">Home</a></li>
       <li><a href="#sobre">Sobre</a></li>
@@ -232,55 +188,54 @@
     </ul>
   </nav>
 
-  <!-- Imagem de destaque -->
-  <div class="content">
-    <img src="BG.png" alt="Imagem de Destaque" class="featured-image">
-  </div>
+  <!-- Cabeçalho principal -->
+  <header class="header" id="home">
+    <h1>MaxCodeBR</h1>
+    <p>Aplicativos móveis inovadores para a sua vida digital</p>
+  </header>
 
-  <!-- Conteúdo principal -->
-  <div class="content">
-    <!-- Seção Sobre -->
-    <section id="sobre" class="container">
-      <h2>Sobre Nós</h2>
-      <p>Na MaxCodeBR, desenvolvemos soluções tecnológicas inovadoras para dispositivos móveis, trazendo o futuro para a palma da sua mão.</p>
-    </section>
-
-    <!-- Seção de Apps -->
-    <section id="apps" class="container">
-      <h2>Nossos Aplicativos</h2>
-      <div class="app-buttons">
-        <a href="https://play.google.com/store/apps/details?id=com.example.app1" target="_blank">App 1</a>
-        <a href="https://play.google.com/store/apps/details?id=com.example.app2" target="_blank">App 2</a>
-        <a href="https://play.google.com/store/apps/details?id=com.example.app3" target="_blank">App 3</a>
-        <a href="https://apps.apple.com/us/app/example-app1/id1234567890" target="_blank">App 4</a>
-        <a href="https://apps.apple.com/us/app/example-app2/id0987654321" target="_blank">App 5</a>
+  <!-- Seção de aplicativos -->
+  <section class="apps-section" id="apps">
+    <div class="apps-container">
+      <div class="app-card">
+        <img src="app1-image.png" alt="App 1">
+        <div class="app-card-content">
+          <h3>App 1 - Gestão de Tarefas</h3>
+          <p>O App 1 oferece uma experiência completa para gerenciar suas tarefas diárias com eficiência.</p>
+          <a href="https://play.google.com/store/apps/details?id=com.example.app1" target="_blank">Baixar App</a>
+        </div>
       </div>
-    </section>
-
-    <!-- Seção para Baixar app-ads.txt -->
-    <section id="baixar" class="container">
-      <h2>Baixar app-ads.txt</h2>
-      <a href="app-ads.txt" class="button" download>Baixar app-ads.txt</a>
-    </section>
-
-    <!-- Cards com Efeito 3D -->
-    <section id="apps" class="container">
-      <div class="card">
-        <h3>Aplicativo 1 - Inovação e Praticidade</h3>
-        <p>O App 1 oferece uma experiência completa para gerenciar suas tarefas diárias com eficiência e estilo.</p>
+      <div class="app-card">
+        <img src="app2-image.png" alt="App 2">
+        <div class="app-card-content">
+          <h3>App 2 - Assistente Pessoal</h3>
+          <p>Transforme a maneira como organiza sua vida com o App 2, sua assistente pessoal sempre à disposição.</p>
+          <a href="https://play.google.com/store/apps/details?id=com.example.app2" target="_blank">Baixar App</a>
+        </div>
       </div>
-      <div class="card">
-        <h3>Aplicativo 2 - Sua Assistente Pessoal</h3>
-        <p>Transforme a maneira como você organiza sua vida com o App 2, sua assistente pessoal sempre à disposição.</p>
+      <div class="app-card">
+        <img src="app3-image.png" alt="App 3">
+        <div class="app-card-content">
+          <h3>App 3 - Finanças Pessoais</h3>
+          <p>Gerencie suas finanças e atinja seus objetivos financeiros com o App 3.</p>
+          <a href="https://play.google.com/store/apps/details?id=com.example.app3" target="_blank">Baixar App</a>
+        </div>
       </div>
-    </section>
-
-  </div>
+      <div class="app-card">
+        <img src="app4-image.png" alt="App 4">
+        <div class="app-card-content">
+          <h3>App 4 - Agenda Digital</h3>
+          <p>Organize seus compromissos com o App 4, uma agenda digital completa.</p>
+          <a href="https://apps.apple.com/us/app/example-app4/id1234567890" target="_blank">Baixar App</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Rodapé -->
   <footer class="footer">
     <p>MaxCodeBR - Todos os direitos reservados. Contato: maxcodebr@example.com</p>
   </footer>
-  
+
 </body>
 </html>
