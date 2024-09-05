@@ -21,7 +21,7 @@
       background-color: #1f1f1f; /* Fundo escuro do menu */
       padding: 15px 0;
       display: flex;
-      justify-content: center; /* Centralizar o conteúdo */
+      justify-content: center; /* Centraliza o conteúdo */
       position: fixed;
       width: 100%;
       top: 0;
@@ -71,16 +71,15 @@
     .hero-image {
       margin-top: 20px;
       text-align: center;
-      width: 70%; /* Ocupa 70% da largura da tela */
-      margin-left: auto;
-      margin-right: auto;
     }
 
     .hero-image img {
-      width: 100%; /* Ajusta a largura para a tela */
+      width: 70%; /* Ocupa 70% da largura da tela */
       height: auto; /* Mantém a proporção */
       max-height: 60vh; /* Ajusta a altura para no máximo 60% da altura da tela */
       object-fit: cover; /* Cobre o elemento sem distorcer a imagem */
+      margin-left: auto;
+      margin-right: auto;
     }
 
     /* Cabeçalho principal */
@@ -108,17 +107,22 @@
       padding: 40px 20px;
       background-color: #1e1e1e;
       margin-top: 20px;
+      max-width: 70%; /* Ocupa 70% da largura da tela */
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .section h2 {
       font-size: 2rem;
       margin-bottom: 20px;
+      text-align: center; /* Centraliza o título da seção */
     }
 
     .section p {
       font-size: 1rem;
       line-height: 1.6;
       color: #b0b0b0;
+      text-align: center; /* Centraliza o texto da seção */
     }
 
     /* Seção de aplicativos */
@@ -207,12 +211,12 @@
         font-size: 2rem;
       }
 
-      .hero-image {
-        width: 90%; /* Ajusta a largura da imagem em telas menores */
-      }
-
       .app-card img {
         max-height: 100px;
+      }
+
+      .section {
+        max-width: 90%; /* Ajusta a largura das seções em telas menores */
       }
     }
   </style>
@@ -265,15 +269,15 @@
       <div class="app-card">
         <img src="app3-image.png" alt="App 3">
         <div class="app-card-content">
-          <h3>App 3 - Fitness Tracker</h3>
-          <p>Monitore seu progresso de fitness e alcance suas metas com o App 3, o rastreador definitivo.</p>
+          <h3>App 3 - Finanças Pessoais</h3>
+          <p>Mantenha suas finanças organizadas e sob controle com o App 3, a solução ideal para seu orçamento.</p>
           <a href="https://play.google.com/store/apps/details?id=com.example.app3" target="_blank">Baixar App</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Seção Sobre -->
+  <!-- Seção Sobre Nós -->
   <section class="section" id="sobre">
     <h2>Sobre Nós</h2>
     <p>Somos uma equipe apaixonada por tecnologia e inovação, dedicada a criar aplicativos móveis que tornam sua vida mais fácil e divertida. Com um compromisso com a qualidade e a experiência do usuário, trabalhamos incansavelmente para oferecer soluções que atendam às suas necessidades.</p>
@@ -282,12 +286,12 @@
   <!-- Seção Contato -->
   <section class="section" id="contato">
     <h2>Contato</h2>
-    <p>Entre em contato conosco para qualquer dúvida ou sugestão. Estamos aqui para ajudar!</p>
+    <p>Entre em contato conosco para mais informações ou para solicitar suporte. Estamos aqui para ajudar!</p>
   </section>
 
   <!-- Rodapé -->
   <footer class="footer">
-    <p>&copy; 2024 MaxCodeBR - Todos os direitos reservados.</p>
+    <p>&copy; 2024 MaxCodeBR. Todos os direitos reservados.</p>
   </footer>
 
 </body>
